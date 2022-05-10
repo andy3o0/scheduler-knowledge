@@ -8,7 +8,8 @@ async function dbConnect() {
   }
 
   const db = await mongoose.connect(
-    "mongodb+srv://scheduler:scheduler111@scheduler.kj21q.mongodb.net/scheduler?retryWrites=true&w=majority",
+    //mongofblink
+    ,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
