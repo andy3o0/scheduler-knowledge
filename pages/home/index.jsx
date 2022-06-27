@@ -11,7 +11,7 @@ const Main = () => {
   const [date, setDate] = React.useState();
   // USE EFFECTS
   useEffect(() => {
-    axios.get("http://localhost:3000/api/roomss").then((allRooms) => {
+    axios.get("/api/roomss").then((allRooms) => {
       setRooms(allRooms.data);
     });
     var today = new Date();

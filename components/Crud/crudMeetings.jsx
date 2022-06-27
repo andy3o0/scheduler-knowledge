@@ -40,27 +40,27 @@ const CRUDmeetings = ({ updateRooms }) => {
   }, [createMeeting, date]);
   ///DELETE Meeting DATA
   const deleteStudent = (id) => {
-    axios.delete(`http://localhost:3000/api/meetings/${id}`);
+    axios.delete(`/api/meetings/${id}`);
     updateRooms();
     update();
     // window.location.reload(false);
   };
   /////GET MEETINGS DATA
   React.useEffect(() => {
-    axios.get("http://localhost:3000/api/meetings").then((allMeetings) => {
+    axios.get("/api/meetings").then((allMeetings) => {
       setMeetings(allMeetings.data);
     });
   }, [fetch]);
   //GET ROOM DATA
   React.useEffect(() => {
-    axios.get("http://localhost:3000/api/roomss").then((allRooms) => {
+    axios.get("/api/roomss").then((allRooms) => {
       setRooms(allRooms.data);
     });
     // console.log(rooms);
   }, []);
   //CREATE Meeting DATA
   const createStudent = () => {
-    axios.post("http://localhost:3000/api/meetings", createMeeting);
+    axios.post("/api/meetings", createMeeting);
     updateRooms();
     update();
     // window.location.reload(false);

@@ -24,7 +24,7 @@ const Room = ({
 
   /////GET MEETINGS DATA
   React.useEffect(() => {
-    axios.get("http://localhost:3000/api/meetings").then((allMeetings) => {
+    axios.get("/api/meetings").then((allMeetings) => {
       setMeetings(allMeetings.data);
     });
   }, [updateRooms]);

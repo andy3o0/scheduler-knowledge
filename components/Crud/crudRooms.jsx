@@ -28,7 +28,7 @@ const CRUDrooms = ({ updateRooms }) => {
 
   /////GET DATA
   React.useEffect(() => {
-    axios.get("http://localhost:3000/api/roomss").then((allRooms) => {
+    axios.get("/api/roomss").then((allRooms) => {
       setRooms(allRooms.data);
     });
   }, [fetch]);
@@ -46,7 +46,7 @@ const CRUDrooms = ({ updateRooms }) => {
 
   ///DELETE DATA
   const deleteStudent = (id) => {
-    axios.delete(`http://localhost:3000/api/roomss/${id}`);
+    axios.delete(`/api/roomss/${id}`);
     update();
     updateRooms();
     // window.location.reload(false);
@@ -54,7 +54,7 @@ const CRUDrooms = ({ updateRooms }) => {
 
   //CREATE DATA
   const createStudent = () => {
-    axios.post("http://localhost:3000/api/roomss", createRoom);
+    axios.post("/api/roomss", createRoom);
     setSelected("");
     update();
     updateRooms();
