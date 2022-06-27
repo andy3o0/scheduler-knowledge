@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const roomsSchema = new mongoose.Schema({
-  name: String,
+  text: String,
   id: Number,
   color: String,
   capacity: Number,

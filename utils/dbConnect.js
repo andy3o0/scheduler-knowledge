@@ -9,7 +9,7 @@ async function dbConnect() {
 
   const db = await mongoose.connect(
     //mongofblink
-    ,
+    "mongodb+srv://andy:andy1234@roombooking.rlajy9w.mongodb.net/?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
